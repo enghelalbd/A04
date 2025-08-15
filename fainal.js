@@ -48,7 +48,49 @@ function  onlyCharacter( str ) {
 
 
 
+//  Problem 3
 
+function  bestTeam( player1, player2 ) {
+
+    if(typeof player1 !=='object'){
+        return "Invalid"
+    }
+
+    if( typeof player2 !=='object'){
+        return "Invalid"
+    }
+
+    let sum1=0;
+    let sum2=0;
+
+    for(let i in player1){
+         if(typeof player1[i]==="number")
+        
+        
+        {
+            sum1=sum1+player1[i]
+        }
+
+    }
+
+
+    for( let i in player2){
+        if(typeof  player2[i]==="number")
+            sum2=sum2+player2[i]
+    }
+
+    if( sum1<sum2){
+        return player1.name;
+    }
+    else if(sum2<sum1){
+        return player2.name;
+    }
+
+    else if(sum1===sum2){
+        return "Tie"
+    }
+        
+}
 
 
 // Problem 4 
